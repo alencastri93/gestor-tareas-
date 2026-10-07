@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gestor de tareas</title>
+</head>
+<body>
+    <h1>GESTOR DE TAREAS </h1>
+    <h3>Servicios Generales</h3>
+
+    <p>Organiza y registra las actividades de trabajo.</p>
+
+    <section>
+        <h2>Nueva tarea</h2>
+
+        <form action="#">
+
+            <label for="titulo">titulo</label>
+            <input type="text" name="titulo" id="titulo" required>
+
+            <label for="descripcion">Descripcion</label>
+            <textarea name="descripcion" id="descripcion" required></textarea >
+
+            <label for="fecha">Fecha</label>
+            <input type="date" name="fecha" id="fecha" required>
+
+            <label for="prioridad">Prioridad</label>
+
+            <select name="prioridad" id="prioridad" required>
+                <option value="" selected disabled>Selecciona una prioridad</option>
+                <option value="baja" >Baja</option>
+                <option value="media" >Media</option>
+                <option value="alta" >Alta</option>
+            </select>
+
+            <label for="categoria">Categoria</label>
+
+            <select name="categoria" id="categoria" required>
+                <option value="" selected disabled>Seleciona una categoria</option>
+                <option value="limpieza" >Limpieza</option>
+                <option value="mantenimiento" >Mantenimiento</option>
+                <option value="jardineria">Jardineria</option>
+                <option value="otro" >Otro</option>
+            </select>
+
+
+            <button>Agregar tarea </button>
+
+        </form>
+
+    </section>
+
+    <section>
+        <h2>Mis tareas </h2>
+
+        <article>
+            <h3>Limpieza parte exterior</h3>
+
+            <img src="img/limpieza.jpg" alt="Área exterior de limpieza">
+
+            <p>Retirar hojas y residuos del área.</p>
+
+            <p>Fecha: 06/10/2026</p>
+            <p>Prioridad: Alta</p>
+            <p>Categoría: Limpieza</p>
+            <p>Estado: Completada</p>
+
+            <button>Editar</button> 
+            <button>Eliminar</button>
+            <button>Marcar como completada </button>
+
+        </article>
+    </section>
+
+</body>
+</html>
