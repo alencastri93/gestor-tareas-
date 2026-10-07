@@ -1,0 +1,234 @@
+/* ==================================================
+   ESTILOS GENERALES
+   ================================================== */
+
+body {
+    background-color: #f3f4f6;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+
+/* ==================================================
+   ENCABEZADO
+   ================================================== */
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+header {
+    background-color: #111827;
+    color: white;
+    padding: 10px;
+}
+
+.subtitulo-header{
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+/* ==================================================
+   SECCIONES
+   ================================================== */
+
+section {
+    padding: 20px;
+}
+
+
+/* ==================================================
+   FORMULARIO — NUEVA TAREA
+   ================================================== */
+
+.formulario {
+    max-width: 400px;
+    margin: 0 auto;
+    border: 2px solid #d1d5db;
+}
+
+
+/* ==================================================
+   CAMPOS DEL FORMULARIO
+   ================================================== */
+
+input,
+textarea,
+select {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+
+/* ==================================================
+   BOTONES
+   ================================================== */
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+/* ----- Botón agregar ----- */
+
+.btn-agregar {
+    background-color: #16a34a;
+    color: wheat;
+}
+
+.btn-agregar:hover {
+    background-color: black;
+}
+
+
+/* ----- Botón editar ----- */
+
+.btn-editar {
+    background-color: #2563eb;
+    color: white;
+}
+
+.btn-editar:hover {
+    background-color: black;
+}
+
+
+/* ----- Botón eliminar ----- */
+
+.btn-eliminar {
+    background-color: #dc2626;
+    color: white;
+}
+
+.btn-eliminar:hover {
+    background-color: black;
+}
+
+
+/* ----- Botón completar ----- */
+
+.btn-completar {
+    background-color: #f59e0b;
+    color: white;
+}
+
+.btn-completar:hover {
+    background-color: black;
+}
+
+
+/* ==================================================
+   LISTA DE TAREAS
+   ================================================== */
+
+.lista-tareas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+
+/* ==================================================
+   TARJETAS DE TAREAS
+   ================================================== */
+
+article {
+    width: 30%;
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    border: 2px solid #d1d5db;
+    margin: 0 0 20px;
+    max-width: 400px;
+}
+
+
+/* ==================================================
+   TÍTULO "MIS TAREAS"
+   ================================================== */
+
+section h2 {
+    text-align: center;
+}
+
+
+/* ==================================================
+   IMAGEN DE LA TAREA
+   ================================================== */
+
+article img {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto 15px;
+}
+
+
+/* ==================================================
+   TÍTULO DE CADA TAREA
+   ================================================== */
+
+article h3 {
+    color: #111827;
+    font-size: 22px;
+    margin-top: 0;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.detalle-lista-tarea{
+    background-color:#f3f4f6 ;
+    border: 2px solid #d1d5db;
+    border-radius: 6px;
+}
+
+/* ==================================================
+   INFORMACIÓN DE LA TAREA
+   ================================================== */
+
+article p {
+    margin: 6px 0;
+}
+
+
+/* ==================================================
+   BOTONES DE CADA TAREA
+   ================================================== */
+
+.botones-tarea {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+
+/* ==================================================
+   RESPONSIVE — TELÉFONO
+   ==================================================
+
+   PENDIENTE PARA MAÑANA:
+   Aquí agregaremos el @media para adaptar
+   las tarjetas a una sola por fila en teléfono.
+
+   PC:       3 tarjetas por fila
+   Teléfono: 1 tarjeta por fila
+
+   ================================================== */
