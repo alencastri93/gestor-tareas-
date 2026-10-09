@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <title>gestor de tareas</title>
 </head>
 <body>
@@ -18,7 +18,7 @@
     <section class="formulario">
         <h2>Nueva tarea</h2>
 
-        <form action="#">
+        <form action="/" method="POST" enctype="multipart/form-data"></form>
 
             <label for="titulo">titulo</label>
             <input type="text" name="titulo" id="titulo" required>
@@ -48,8 +48,16 @@
                 <option value="otro" >Otro</option>
             </select>
 
+            <label for="imagen">Foto de la tarea</label>
+            <input
+                type="file"
+                name="imagen"
+                id="imagen"
+                accept="image/*"
+            >
 
-            <button class="btn-agregar">Agregar tarea </button>
+
+            <button type="submit" class="btn-agregar">Agregar tarea </button>
 
         </form>
 
@@ -62,7 +70,7 @@
             <article>
                 <h3>Limpieza parte exterior</h3>
 
-                <img src="img/limpieza.jpg" alt="Área exterior de limpieza">
+                <img src="{{ url_for('static', filename='img/limpieza.jpg') }}" alt="Limpieza">
 
                 <div class="detalle-lista-tarea">
                     
@@ -126,68 +134,7 @@
 
             </article>
 
-            <article>
-                <h3>Limpieza parte exterior</h3>
-
-                <img src="img/limpieza.jpg" alt="Área exterior de limpieza">
-
-                <p>Retirar hojas y residuos del área.</p>
-
-                <p>Fecha: 06/10/2026</p>
-                <p>Prioridad: Alta</p>
-                <p>Categoría: Limpieza</p>
-                <p>Estado: Completada</p>
-
-                <div class="botones-tarea">
-                        <button class="btn-editar">Editar</button> 
-                        <button class="btn-eliminar">Eliminar</button>
-                        <button class="btn-completar">Marcar como completada </button>
-
-                </div>
-
-            </article>
-
-            <article>
-                <h3>Limpieza parte exterior</h3>
-
-                <img src="img/limpieza.jpg" alt="Área exterior de limpieza">
-
-                <p>Retirar hojas y residuos del área.</p>
-
-                <p>Fecha: 06/10/2026</p>
-                <p>Prioridad: Alta</p>
-                <p>Categoría: Limpieza</p>
-                <p>Estado: Completada</p>
-
-                <div class="botones-tarea">
-                        <button class="btn-editar">Editar</button> 
-                        <button class="btn-eliminar">Eliminar</button>
-                        <button class="btn-completar">Marcar como completada </button>
-
-                </div>
-
-            </article>
-
-            <article>
-                <h3>Limpieza parte exterior</h3>
-
-                <img src="img/limpieza.jpg" alt="Área exterior de limpieza">
-
-                <p>Retirar hojas y residuos del área.</p>
-
-                <p>Fecha: 06/10/2026</p>
-                <p>Prioridad: Alta</p>
-                <p>Categoría: Limpieza</p>
-                <p>Estado: Completada</p>
-
-                <div class="botones-tarea">
-                        <button class="btn-editar">Editar</button> 
-                        <button class="btn-eliminar">Eliminar</button>
-                        <button class="btn-completar">Marcar como completada </button>
-
-                </div>
-
-            </article>
+          
         </div>
         
     </section>

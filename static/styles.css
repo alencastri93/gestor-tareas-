@@ -1,6 +1,11 @@
 /* ==================================================
    ESTILOS GENERALES
    ================================================== */
+*{
+    box-sizing: border-box;
+}
+
+
 
 body {
     background-color: #f3f4f6;
@@ -88,8 +93,12 @@ button {
 /* ----- Botón agregar ----- */
 
 .btn-agregar {
+
     background-color: #16a34a;
     color: wheat;
+    display: block;
+    margin: 0 auto;
+    
 }
 
 .btn-agregar:hover {
@@ -138,9 +147,9 @@ button {
    ================================================== */
 
 .lista-tareas {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
 }
 
 
@@ -149,13 +158,14 @@ button {
    ================================================== */
 
 article {
-    width: 30%;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
     background-color: white;
     padding: 15px;
     border-radius: 8px;
     border: 2px solid #d1d5db;
-    margin: 0 0 20px;
-    max-width: 400px;
+    margin: 0;
 }
 
 
@@ -224,11 +234,26 @@ article p {
    RESPONSIVE — TELÉFONO
    ==================================================
 
-   PENDIENTE PARA MAÑANA:
-   Aquí agregaremos el @media para adaptar
-   las tarjetas a una sola por fila en teléfono.
-
    PC:       3 tarjetas por fila
+   tablet:   2 tarjetas por fila 
    Teléfono: 1 tarjeta por fila
 
    ================================================== */
+
+   @media (max-width: 600px){
+
+    .lista-tareas{
+        grid-template-columns: 1fr;
+    }
+
+   }
+
+
+/* RESPONSIVE - TABLET */
+@media (min-width: 601px) and (max-width: 900px) {
+    
+     .lista-tareas {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+     
+}
